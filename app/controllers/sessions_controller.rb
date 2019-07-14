@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if user&.authenticate(params[:session][:password])
       session[:user_id] = user.id
       flash[:success] = 'You have successfully logged in'
-      redirect_to root_path
+      redirect_to chatroom_path
     else
       flash.now[:error] = 'There was something wrong with your login information'
       render 'new'
@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     flash[:success] = 'You have successfully logged out'
-    redirect_to login_path
+    redirect_to root_path
   end
 
   private
@@ -26,7 +26,7 @@ class SessionsController < ApplicationController
   def logged_in_redirect
     if logged_in?
       flash[:error] = 'You are already logged in'
-      redirect_to root_path
+      redirect_to chatroom_path
     end
   end
 end
