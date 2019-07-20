@@ -2,15 +2,11 @@ class UsersController < ApplicationController
   def new; end
 
   def create
-    @user = User.new(user_params)
-    if @user.save
-      session[:user_id] = @user.id
-      # @user.update(online: true)
-      flash[:success] = 'Welcome to MessageMe App'
-      redirect_to chatroom_path
-    else
-      render 'sessions/new'
-    end
+    @user = User.create(username: params[:session][:username], password: params[:session][:password], online: true)
+    session[:user_id] = @user.id
+    ActionCable.server.broadcast 'appearance_channel', { username: @user.username, x: true }
+    flash[:success] = 'Welcome to MessageMe App'
+    redirect_to chatroom_path
   end
 
   private
