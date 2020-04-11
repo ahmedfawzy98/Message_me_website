@@ -1,24 +1,13 @@
-# README
+# Message-Me
+This is a simple messaging or chatting website as a hobby project aimed to learning a Ruby on Rails and horning the web development skills.\
+[Message-Me](https://message-me-ahmed.herokuapp.com/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Features
+* Live chatting.
+* Online users preview inside the chatting room.
 
-* Ruby version
+## Built with
+[Ruby on Rails](https://rubyonrails.org/)\
+[Semantic UI](https://semantic-ui.com/)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
