@@ -1,5 +1,5 @@
 # Message-Me
-This is a simple messaging or chatting website as a hobby project aimed to learning a Ruby on Rails, Semantic UI and honing the web development skills.\
+This is a simple messaging or chatting website as a hobby project aimed to learn Ruby on Rails, Semantic UI and honing the web development skills.\
 [Message-Me](https://message-me-ahmed.herokuapp.com/)
 
 
